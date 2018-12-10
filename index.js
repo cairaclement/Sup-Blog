@@ -20,9 +20,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', blogRouter);
 app.use('/admin', adminRouter);
 
-server.listen(port, () => {
-    console.log("App is running on port " + port);
-});
+
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 const startApp = app => {
