@@ -25,7 +25,7 @@ app.use('/admin', adminRouter);
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 const startApp = app => {
     return new Promise( (resolve, reject) => {
-        const server = app.listen(PORT, HOST, resolve);
+        const server = app.listen(PORT, resolve);
         server.on('error', reject)
     } );
 };
