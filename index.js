@@ -12,7 +12,7 @@ app.set('view engine', 'pug');
 app.set('views', './views');app.set('view cache', process.env.NODE_ENV === 'production');
 
 
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 const HOST = 'localhost';
 
 app.use(express.static(path.join(__dirname, 'public')));
