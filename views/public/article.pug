@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+block variables
+    - let title = article.title;
+
+block content
+    main.container
+        a(href="/")
+            i.fa.fa-arrow-left
+            |  Retour à la liste des articles
+        h1= article.title + ' '
+            span.categorie
+                i.fa.fa-tag
+                |  #{article.category.title}
+        h3
+            | Publié le #{new Date(article.dateCreated).toLocaleString()}, par 
+            em= article.author.name
+        
+        p= article.content
+
+        hr
